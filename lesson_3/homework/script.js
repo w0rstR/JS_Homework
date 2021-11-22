@@ -61,8 +61,10 @@
 // const arr=[]
 //
 // for(let i=0;i<10;i++){
-//     arr.push(Math.floor(Math.random()*(i+5)))
+//     arr[i]=Math.floor(Math.random()*(i+5))
 // }
+// console.log(arr)
+
 // arr.forEach((item)=>{
 //     console.log(item)
 // })
@@ -133,7 +135,7 @@
 // const arr=[3213,321321,321321,312321,6546,6546,6546456,645645,6456,6543,'321321','312312','ddsadsa','dasdas','dasdas','hgfhfg','dsadasd','sdadasdasdas','dsadas','dasads',true,true,false,true,true,false,false,false,true,false]
 //
 // arr.forEach((item)=>{
-//     if(typeof(item)=='boolean'){
+//     if(typeof(item)==='boolean'){
 //         console.log(item)
 //     }
 // })
@@ -143,7 +145,7 @@
 // const arr=[3213,321321,321321,312321,6546,6546,6546456,645645,6456,6543,'321321','312312','ddsadsa','dasdas','dasdas','hgfhfg','dsadasd','sdadasdasdas','dsadas','dasads',true,true,false,true,true,false,false,false,true,false]
 //
 // arr.forEach((item)=>{
-//     if(typeof(item)=='number'){
+//     if(typeof(item)==='number'){
 //         console.log(item)
 //     }
 // })
@@ -154,7 +156,7 @@
 //
 //
 // arr.forEach((item)=>{
-//     if(typeof(item)=='string'){
+//     if(typeof(item)==='string'){
 //         console.log(item)
 //     }
 // })
@@ -165,9 +167,9 @@
 //let arr=[]
 
 // for(let i=1;i<=10;i++){
-//     if((i%2)==0){
+//     if(i%2===0){
 //         arr.push(Math.floor(Math.random()*(i+3)))
-//     }else if((i%2)==1){
+//     }else if(i%2===1){
 //         const item = 'str'+ Math.floor(Math.random()*(i+3))
 //         arr.push(item)
 //     }
