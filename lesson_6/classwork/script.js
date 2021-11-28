@@ -84,6 +84,8 @@ function genRandomNumberOfArray(size){
 
 
 
+
+
 //- є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},

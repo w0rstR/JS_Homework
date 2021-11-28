@@ -72,6 +72,8 @@
 
 
 
+
+
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
 //     let str = "HTML JavaScript PHP";
 // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
@@ -106,6 +108,9 @@
 //     return str[0].toUpperCase()+str.slice(1)
 // }
 // console.log(repleceRegister('lorem ipsum dolor sit amet'))
+
+
+
 
 
 //
