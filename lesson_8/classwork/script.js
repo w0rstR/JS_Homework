@@ -1,6 +1,6 @@
 // Взяти файл template_2.html та працювати в ньому
 // 1) Напишіть код, який :
-// a) змінює  тексту елемнту з ід main_header на назву групи в якій ви вчитесь (mon-year)
+// a) змінює клас  елемнту з ід main_header на назву групи в якій ви вчитесь (mon-year)
 // b) робить шириниу елементу ul 400px
 // c) робить шириниу всіх елементів з класом linkList шириною 50%
 // d) отримує текст який зберігається в елементі з класом listElement2
@@ -14,18 +14,18 @@
 // l) отримати елементи p та змінити їм padding на 20px
 // m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year. Пример sep-2021)
 
-const mainHeader = document.getElementById('main_header')
-mainHeader.textContent='SEP-2021'
+const mainHeader = document.querySelector('#main_header')
+mainHeader.id = 'sept-2021';
 
 const ulItem = document.querySelectorAll('ul')
 
 ulItem.forEach(item=>{
-    item.style.width='400px'
+    item.style.width='400px';
 })
 
 const linkList = document.getElementsByClassName('linkList')
 for(let i=0;i<linkList.length;i++){
-    linkList[i].style.width='150%'
+    linkList[i].style.width='150%';
 }
 
 const foundItem=document.getElementsByClassName('listElement2')
