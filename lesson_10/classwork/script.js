@@ -45,6 +45,68 @@
 
 
 
+function createTable(){
+    const wrapperOfInput = document.createElement('div');
+    wrapperOfInput.style.display='flex';
+    wrapperOfInput.style.flexDirection='column'
+    wrapperOfInput.style.rowGap='10px'
+
+    const firstInput = document.createElement('input');
+    firstInput.type='text'
+    firstInput.style.width='300px'
+    firstInput.style.height='50px'
+    firstInput.style.fontSize='24px'
+    const secondInput = document.createElement('input');
+    secondInput.type='text'
+    secondInput.style.width='300px'
+    secondInput.style.height='50px'
+    secondInput.style.fontSize='24px'
+    const thirdInput = document.createElement('input')
+    thirdInput.type='text'
+    thirdInput.style.width='300px'
+    thirdInput.style.height='50px'
+    thirdInput.style.fontSize='24px'
+
+    const btn = document.createElement('button');
+    btn.style.padding='20px 50px 20px 50px';
+    btn.textContent='Click'
+    btn.style.width='300px'
+    btn.style.fontSize='36px'
+
+
+    wrapperOfInput.append(firstInput,secondInput,thirdInput,btn)
+    document.body.append(wrapperOfInput)
+
+    btn.addEventListener('click',(e)=>{
+        e.preventDefault();
+
+        const table = document.createElement('table')
+        table.style.border = '1px solid grey';
+        table.style.padding='5px'
+        table.style.marginTop='10px'
+        const countOfRows = +firstInput.value;
+        const countOfColumns = +secondInput.value;
+        const valueOfInCell = thirdInput.value;
+
+
+        for(let i = 0; i<countOfRows;i++){
+            const tr = document.createElement('tr');
+            tr.style.border='1px solid grey';
+            for(let i = 0; i<countOfColumns;i++){
+                const td = document.createElement('td')
+                td.style.border='1px solid grey';
+                td.textContent = valueOfInCell;
+                td.style.padding='10px';
+                tr.append(td)
+            }
+            table.append(tr)
+        }
+        document.body.append(table)
+    })
+}
+
+
+
 
 
 
@@ -136,4 +198,4 @@ function secondFoo(arr){
         })
     })
 }
-secondFoo(arr)
+//secondFoo(arr)
