@@ -1,0 +1,12 @@
+.link{
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: #789c9c;
+    width: 250px;
+}
+.link a{
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+}
