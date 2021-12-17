@@ -15,12 +15,12 @@ async function getUsers(){
             return result
         }).then(res=>{
             createUser(res)
-            return res
-        }).then(res=>{
-
         })
 }
 getUsers()
+
+
+
 
 async function createUser(arr){
     const wrapper = document.createElement('div')
@@ -63,8 +63,11 @@ async function createUser(arr){
         cathPhraseBlock.textContent = `Cath phrase: ${cathPhrase}`
         const bsBlock = document.createElement('div')
         bsBlock.textContent = `Bs: ${bs}`
+        const btn = document.createElement('button')
+        btn.textContent = 'Click!!!'
+        btn.classList.add('btn-user')
 
-        userBlock.append(idBlock,nameBlock,usernameBlock,emailBlock,streetBlock,suiteBlock,cityBlock,zipcodeBlock,latBlock,lngBlock,phoneBlock,websiteBlock,companyNameBlock,cathPhraseBlock,bsBlock)
+        userBlock.append(idBlock,nameBlock,usernameBlock,emailBlock,streetBlock,suiteBlock,cityBlock,zipcodeBlock,latBlock,lngBlock,phoneBlock,websiteBlock,companyNameBlock,cathPhraseBlock,bsBlock,btn)
         userContainer.append(userBlock)
         wrapper.append(userContainer)
     })
@@ -80,10 +83,34 @@ async function createUser(arr){
                 createPost(res,userblock[i])
             })
     }
+    setTimeout(()=>{
+    const userButtons = document.querySelectorAll('.btn-user')
+    const postsBlock = document.querySelectorAll('.post-wrapper')
+    userButtons.forEach((btn,i)=>{
+        btn.addEventListener(('click'),()=>{
+            if(postsBlock[i].classList.contains('d-block')){
+                postsBlock[i].classList.remove('d-block')
+                postsBlock[i].classList.add('d-none')
+            }else{
+                postsBlock[i].classList.remove('d-none')
+                postsBlock[i].classList.add('d-block')
+            }
+        })
+    })
+},3000)
+
+
+
 }
 
 
 async function  createPost(arr,container){
+    const postWrapper = document.createElement('div')
+
+    postWrapper.classList.add('post-wrapper')
+    postWrapper.classList.add('d-block')
+
+
     for (const p of arr) {
         const i = arr.indexOf(p);
         const {userId,id,title,body} = p;
@@ -102,19 +129,17 @@ async function  createPost(arr,container){
         btn.classList.add('btn')
         btn.textContent='Click!'
         postBlock.append(userIdBlock,idBlock,titleBlock,postBody,btn)
-        container.append(postBlock)
-
+        postWrapper.append(postBlock)
         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${i+1}/comments`)
             .then(res=>{
                 const response = res.json();
                 return response;
             }).then(res=>{
                 createCommentForPost(res,postBlock,btn)
-                return res
             })
 
     }
-
+    container.append(postWrapper)
 
 }
 

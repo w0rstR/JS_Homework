@@ -38,13 +38,16 @@ body{
     flex-wrap: wrap;
 
 }
-.user-container{
-
-}
 
 .d-block{
     display: block;
 }
 .d-none{
     display: none;
+}
+.btn-user{
+    outline: none;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    margin-top: 10px;
 }
