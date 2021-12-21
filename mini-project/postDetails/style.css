@@ -1,0 +1,51 @@
+.post{
+    padding: 15px;
+    border: 5px solid grey;
+    font-size: 28px;
+    background-color: palegoldenrod;
+}
+
+.post-wrapper{
+    padding-top: 50px;
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+}
+body{
+    background-color: lightsteelblue;
+}
+.post-btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    margin-top: 15px;
+    background-color: springgreen;
+    color: white;
+    border-radius: 15px;
+}
+.comment-block{
+    width: 350px;
+    margin-top: 20px;
+    border: 5px solid darkslategrey;
+    background-color: peru;
+    padding: 20px;
+    font-size: 24px;
+}
+.wrapper-comment{
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    width: 1900px;
+    justify-content: center;
+}
+.btn-restart{
+    padding: 15px 30px 15px 30px;
+    outline: none;
+    border: none;
+    background-color: springgreen;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
